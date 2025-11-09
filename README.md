@@ -122,10 +122,14 @@ def lambda_handler(event, context):
 - Rotate GitHub tokens if used
 
 ---
-👨‍💻 Author
+## 👨‍💻 Author
 
 Ritesh — DevOps Enthusiast learning Cloud, Automation & Infrastructure as Code.
 
+## 📢 Connect With Me
+- 💼 [LinkedIn](https://linkedin.com/in/ritesh-singh-092b84340)  
+- 📝 [Hashnode Blog](https://ritesh-devops.hashnode.dev)  
+- 💻 [GitHub](https://github.com/ritesh355)  
 
 
 
