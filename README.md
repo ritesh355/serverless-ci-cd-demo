@@ -21,7 +21,7 @@ Whenever you push code to the GitHub repository:
 7. **AWS IAM** manages access and permissions
 
 ---
-# Tech stack
+## Tech stack
 | Category       | Service                | Description                             |
 | -------------- | ---------------------- | --------------------------------------- |
 | Source Control | **GitHub**             | Stores source code & triggers webhook   |
@@ -32,6 +32,21 @@ Whenever you push code to the GitHub repository:
 | Storage        | **Amazon S3**          | Hosts the static website                |
 | Delivery       | **Amazon CloudFront**  | Delivers content globally               |
 | Security       | **AWS IAM**            | Manages permissions and access          |
-| Monitoring     | **Amazon CloudWatch**  | Logs and monitors the pipeline          |
+
+---
+## 🧠 DevOps Concepts Demonstrated
+- Serverless CI/CD automation
+
+- Event-driven architecture
+
+- GitHub webhook integration
+
+- AWS-native CI/CD pipeline
+
+- Infrastructure-as-Code mindset (manual setup, IaC optional)
+
+- Cloud security & monitoring best practices
+---
+
 
 
