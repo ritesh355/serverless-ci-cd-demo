@@ -47,6 +47,85 @@ Whenever you push code to the GitHub repository:
 
 - Cloud security & monitoring best practices
 ---
+# 🚀 Setup Steps
+## 1️⃣ Push Your Code to GitHub
+
+- Create or use an existing repository with your app source code.
+
+## 2️⃣ Create an API Gateway Endpoint
+
+- Go to Amazon API Gateway → Create API
+
+- Choose HTTP API
+
+- Note the Invoke URL (this will be used in the GitHub webhook)
+
+## 3️⃣ Create AWS Lambda Function
+
+Runtime: Python 3.x / Node.js
+
+Purpose: Trigger the pipeline
+
+Sample Python code:
+```
+import boto3
+
+def lambda_handler(event, context):
+    client = boto3.client('codepipeline')
+    response = client.start_pipeline_execution(name='your-pipeline-name')
+    return {"status": "Pipeline started", "response": response}
+```
+- Add environment variable:
+
+  - PIPELINE_NAME = your-pipeline-name
+
+- Give Lambda permission to run CodePipeline:
+
+  - Attach AWSCodePipelineFullAccess policy to its IAM Role.
+
+---
+# 4️⃣ Create CodePipeline
+
+- Source: **GitHub (Connect via OAuth or token)**
+
+- Build: **AWS CodeBuild**
+
+- Deploy: **Amazon S3**
+
+# 5️⃣ Add GitHub Webhook
+
+- Go to your **GitHub Repo → Settings → Webhooks → Add webhook**
+
+- Payload URL = your **API Gateway Invoke URL**
+
+- Content type = application/json
+
+- Trigger on Just the push event
+
+# 6️⃣ Test the Flow
+
+- Commit & push code to GitHub
+
+- Watch the pipeline start automatically
+
+- Deployed files will appear in your S3 bucket
+
+- Access your static site via CloudFront URL
+
+---
+## 🔐 Security Notes
+
+- Limit Lambda and CodePipeline IAM permissions (Principle of Least Privilege)
+
+- Use HTTPS for API Gateway
+
+- Rotate GitHub tokens if used
+
+---
+👨‍💻 Author
+
+Ritesh — DevOps Enthusiast learning Cloud, Automation & Infrastructure as Code.
+
 
 
 
