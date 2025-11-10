@@ -5,7 +5,7 @@ A **fully serverless CI/CD pipeline** built on AWS that automatically deploys co
 This project demonstrates **event-driven DevOps automation** using AWS native services.
 
 
-**detailed** Blog [Link](https://dev.to/ritesh355/aws-devops-project-building-a-serverless-cicd-pipeline-with-aws-lambda-codepipeline-and-50jk)
+- **Full-Blog** [Link](https://dev.to/ritesh355/aws-devops-project-building-a-serverless-cicd-pipeline-with-aws-lambda-codepipeline-and-50jk)
 
 ---
 ## 🛠️ **Architecture Workflow**
